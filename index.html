@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kopima — Rasa Asli, Energi Setiap Hari</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            skyclassic: {
+              50: '#f3f9fd',
+              100: '#e5f3fb',
+              200: '#c9e7f7',
+              300: '#9ed3ee',
+              400: '#67b8e1',
+              500: '#3599ce',
+              600: '#237daf',
+              700: '#1d648e',
+              800: '#1c5475',
+              900: '#1d4762'
+            }
+          },
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+            display: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-white text-skyclassic-900 font-sans">
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <header class="absolute top-0 left-0 right-0 z-50">
+    <nav class="max-w-7xl mx-auto px-6 lg:px-8 py-6">
+      <div class="flex items-center justify-between">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-skyclassic-600 text-white
+                      flex items-center justify-center shadow-lg shadow-skyclassic-600/20">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="w-6 h-6"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor"
+                 stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M6 8h12v5a6 6 0 01-12 0V8z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M6 10H4a2 2 0 000 4h2"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 4c1-1 1-2 0-3m3 3c1-1 1-2 0-3"/>
+            </svg>
+          </div>
+
+          <div>
+            <span class="block text-2xl font-display font-bold tracking-tight">
+              Kopima
+            </span>
+            <span class="block text-[10px] text-skyclassic-600 tracking-[0.18em] uppercase">
+              Rasa Asli, Energi Setiap Hari
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-9">
+          <a href="#beranda"
+             class="text-skyclassic-700 font-semibold border-b-2 border-skyclassic-500 pb-1">
+            Beranda
+          </a>
+
+          <a href="#produk"
+             class="text-slate-600 hover:text-skyclassic-600 transition">
+            Produk
+          </a>
+
+          <a href="#tentang"
+             class="text-slate-600 hover:text-skyclassic-600 transition">
+            Tentang Kami
+          </a>
+
+          <a href="#kontak"
+             class="text-slate-600 hover:text-skyclassic-600 transition">
+            Kontak
+          </a>
+        </div>
+
+        <!-- Login -->
+        <a href="#login"
+           class="hidden sm:flex items-center gap-2 border-2 border-skyclassic-500
+                  text-skyclassic-700 px-6 py-2.5 rounded-full font-semibold
+                  hover:bg-skyclassic-500 hover:text-white transition duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               class="w-5 h-5"
+               fill="none"
+               viewBox="0 0 24 24"
+               stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 21a8 8 0 0116 0"/>
+          </svg>
+          Login
+        </a>
+
+        <!-- Mobile Button -->
+        <button class="md:hidden text-skyclassic-800"
+                onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               class="w-7 h-7"
+               fill="none"
+               viewBox="0 0 24 24"
+               stroke="currentColor">
+            <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu"
+           class="hidden md:hidden mt-5 bg-white rounded-2xl p-5 shadow-xl">
+        <div class="flex flex-col gap-4">
+          <a href="#beranda" class="font-semibold text-skyclassic-700">Beranda</a>
+          <a href="#produk" class="text-slate-600">Produk</a>
+          <a href="#tentang" class="text-slate-600">Tentang Kami</a>
+          <a href="#kontak" class="text-slate-600">Kontak</a>
+          <a href="#login"
+             class="text-center bg-skyclassic-600 text-white rounded-full py-3 font-semibold">
+            Login
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
+  <main id="beranda">
+
+    <section class="relative min-h-screen overflow-hidden
+                    bg-gradient-to-br from-skyclassic-50 via-white to-skyclassic-100">
+
+      <!-- Decorative circles -->
+      <div class="absolute -top-32 -right-32 w-96 h-96
+                  rounded-full bg-skyclassic-200/40 blur-3xl"></div>
+
+      <div class="absolute bottom-0 -left-40 w-96 h-96
+                  rounded-full bg-skyclassic-100/70 blur-3xl"></div>
+
+      <div class="relative max-w-7xl mx-auto px-6 lg:px-8
+                  pt-36 pb-20 lg:pt-44 lg:pb-24">
+
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+          <!-- Hero Text -->
+          <div class="max-w-2xl">
+
+            <div class="inline-flex items-center gap-2 mb-6
+                        px-4 py-2 rounded-full
+                        bg-white border border-skyclassic-200
+                        text-skyclassic-700 text-sm font-semibold shadow-sm">
+
+              <span class="w-2 h-2 rounded-full bg-skyclassic-500"></span>
+              Kopi Pilihan Indonesia
+            </div>
+
+            <h1 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl
+                       leading-[1.05] text-skyclassic-900">
+
+              Nikmatnya Kopi,
+              <span class="text-skyclassic-600">
+                Ketenangan
+              </span>
+              di Setiap Tegukan.
+            </h1>
+
+            <p class="mt-7 text-lg leading-8 text-slate-600 max-w-xl">
+              Kopima menghadirkan biji kopi pilihan dari perkebunan terbaik
+              Indonesia. Aroma autentik, rasa seimbang, dan kualitas yang
+              menemani setiap momen harimu.
+            </p>
+
+            <!-- CTA -->
+            <div class="mt-9 flex flex-col sm:flex-row gap-4">
+
+              <a href="#produk"
+                 class="group inline-flex items-center justify-center gap-3
+                        bg-skyclassic-600 text-white
+                        px-7 py-4 rounded-full font-semibold
+                        shadow-xl shadow-skyclassic-600/20
+                        hover:bg-skyclassic-700
+                        hover:-translate-y-1 transition duration-300">
+
+                <span>Beli Sekarang</span>
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="w-5 h-5 group-hover:translate-x-1 transition"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor">
+                  <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                </svg>
+              </a>
+
+              <a href="#video"
+                 class="inline-flex items-center justify-center gap-3
+                        bg-white text-skyclassic-700
+                        border-2 border-skyclassic-200
+                        px-7 py-4 rounded-full font-semibold
+                        hover:border-skyclassic-500
+                        hover:bg-skyclassic-50 transition duration-300">
+
+                <span class="w-8 h-8 rounded-full bg-skyclassic-100
+                             flex items-center justify-center">
+
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                       class="w-4 h-4 ml-0.5"
+                       viewBox="0 0 24 24"
+                       fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+
+                </span>
+
+                Tonton Video
+              </a>
+
+            </div>
+
+            <!-- Mini Stats -->
+            <div class="mt-12 flex items-center gap-8">
+
+              <div>
+                <p class="text-2xl font-bold text-skyclassic-800">100%</p>
+                <p class="text-sm text-slate-500">Biji Arabika</p>
+              </div>
+
+              <div class="w-px h-10 bg-skyclassic-200"></div>
+
+              <div>
+                <p class="text-2xl font-bold text-skyclassic-800">250g</p>
+                <p class="text-sm text-slate-500">Per Kemasan</p>
+              </div>
+
+              <div class="w-px h-10 bg-skyclassic-200"></div>
+
+              <div>
+                <p class="text-2xl font-bold text-skyclassic-800">100%</p>
+                <p class="text-sm text-slate-500">Indonesia</p>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- Hero Product -->
+          <div class="relative flex justify-center lg:justify-end">
+
+            <!-- Background Shape -->
+            <div class="absolute w-[420px] h-[420px] sm:w-[520px] sm:h-[520px]
+                        rounded-full bg-skyclassic-200/60
+                        blur-sm"></div>
+
+            <div class="relative w-full max-w-xl">
+
+              <!-- Product Card -->
+              <div class="relative z-10 bg-white/70 backdrop-blur-sm
+                          rounded-[2.5rem] p-8
+                          border border-white shadow-2xl
+                          shadow-skyclassic-900/10">
+
+                <div class="aspect-square rounded-[2rem]
+                            bg-gradient-to-br from-skyclassic-100
+                            to-skyclassic-300
+                            flex flex-col items-center justify-center
+                            overflow-hidden">
+
+                  <!-- Coffee Package -->
+                  <div class="relative">
+
+                    <div class="w-48 sm:w-56 h-64 sm:h-72
+                                bg-white rounded-2xl
+                                shadow-2xl shadow-skyclassic-900/20
+                                border border-skyclassic-100
+                                flex flex-col items-center
+                                justify-center
+                                rotate-[-3deg]">
+
+                      <div class="w-14 h-14 rounded-full
+                                  bg-skyclassic-600 text-white
+                                  flex items-center justify-center mb-4">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             class="w-8 h-8"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke="currentColor">
+                          <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M6 8h12v5a6 6 0 01-12 0V8z"/>
+                          <path stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M6 10H4a2 2 0 000 4h2"/>
+                        </svg>
+
+                      </div>
+
+                      <p class="font-display text-4xl font-bold
+                                text-skyclassic-800">
+                        Kopima
+                      </p>
+
+                      <p class="text-[9px] tracking-[0.18em]
+                                uppercase text-skyclassic-500 mt-1">
+                        Arabica Coffee
+                      </p>
+
+                      <div class="mt-7 w-32 h-1 rounded-full
+                                  bg-skyclassic-200"></div>
+
+                      <p class="mt-3 text-xs text-slate-500">
+                        Premium Quality
+                      </p>
+
+                    </div>
+
+                    <!-- Coffee Beans -->
+                    <div class="absolute -bottom-5 -left-12
+                                flex gap-2">
+
+                      <span class="w-6 h-4 rounded-full bg-skyclassic-900
+                                   rotate-[-25deg]"></span>
+                      <span class="w-7 h-4 rounded-full bg-skyclassic-800
+                                   rotate-[15deg]"></span>
+                      <span class="w-6 h-4 rounded-full bg-skyclassic-700
+                                   rotate-[-10deg]"></span>
+                      <span class="w-7 h-4 rounded-full bg-skyclassic-900
+                                   rotate-[25deg]"></span>
+
+                    </div>
+
+                  </div>
+
+                  <!-- Coffee Cup -->
+                  <div class="absolute bottom-8 right-8
+                              w-28 h-20 bg-white rounded-b-[3rem]
+                              rounded-t-xl shadow-xl
+                              flex items-center justify-center">
+
+                    <div class="w-20 h-8 bg-skyclassic-900
+                                rounded-full -mt-8"></div>
+
+                    <div class="absolute -right-7 top-5
+                                w-10 h-10 rounded-full
+                                border-8 border-white"></div>
+
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Floating Badge -->
+              <div class="absolute z-20 -top-5 -left-3 sm:-left-8
+                          bg-white rounded-2xl px-5 py-4
+                          shadow-xl border border-skyclassic-100">
+
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full
+                              bg-skyclassic-100
+                              flex items-center justify-center">
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="w-5 h-5 text-skyclassic-600"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor">
+                      <path stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"/>
+                    </svg>
+
+                  </div>
+
+                  <div>
+                    <p class="text-sm font-bold text-skyclassic-900">
+                      Premium
+                    </p>
+                    <p class="text-xs text-slate-500">
+                      Quality Coffee
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Wave -->
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 100"
+             class="w-full h-auto"
+             preserveAspectRatio="none">
+          <path fill="#ffffff"
+                d="M0,70 C240,120 420,20 720,55 C1020,90 1200,30 1440,65 L1440,100 L0,100 Z">
+          </path>
+        </svg>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCT SECTION
+    ========================== -->
+    <section id="produk" class="py-24 bg-white">
+
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="text-center max-w-2xl mx-auto">
+
+          <span class="text-sm font-bold uppercase tracking-[0.2em]
+                       text-skyclassic-500">
+            Pilihan Kopima
+          </span>
+
+          <h2 class="mt-3 font-display text-4xl md:text-5xl
+                     font-bold text-skyclassic-900">
+            Temukan Rasa Favoritmu
+          </h2>
+
+          <p class="mt-5 text-slate-600 leading-7">
+            Diproses dengan penuh perhatian untuk menghasilkan cita rasa
+            kopi yang konsisten di setiap seduhan.
+          </p>
+
+        </div>
+
+        <div class="mt-14 grid md:grid-cols-3 gap-7">
+
+          <!-- Card -->
+          <div class="group bg-skyclassic-50 rounded-3xl p-7
+                      border border-skyclassic-100
+                      hover:-translate-y-2 transition duration-300">
+
+            <div class="h-48 rounded-2xl bg-skyclassic-200
+                        flex items-center justify-center">
+
+              <div class="w-24 h-32 bg-white rounded-xl shadow-lg
+                          flex items-center justify-center">
+                <span class="font-display font-bold
+                             text-skyclassic-700">
+                  K
+                </span>
+              </div>
+
+            </div>
+
+            <h3 class="mt-6 text-xl font-bold">Kopima Arabika</h3>
+
+            <p class="mt-2 text-slate-500 text-sm leading-6">
+              Aroma lembut dengan rasa seimbang dan aftertaste yang nyaman.
+            </p>
+
+            <a href="#"
+               class="inline-block mt-5 text-skyclassic-600 font-semibold
+                      group-hover:text-skyclassic-800">
+              Lihat Produk →
+            </a>
+
+          </div>
+
+
+          <div class="group bg-skyclassic-50 rounded-3xl p-7
+                      border border-skyclassic-100
+                      hover:-translate-y-2 transition duration-300">
+
+            <div class="h-48 rounded-2xl bg-skyclassic-100
+                        flex items-center justify-center">
+
+              <div class="w-24 h-32 bg-skyclassic-600 rounded-xl shadow-lg
+                          flex items-center justify-center">
+                <span class="font-display font-bold text-white text-2xl">
+                  K
+                </span>
+              </div>
+
+            </div>
+
+            <h3 class="mt-6 text-xl font-bold">Kopima Signature</h3>
+
+            <p class="mt-2 text-slate-500 text-sm leading-6">
+              Perpaduan karakter kopi yang kaya untuk menemani hari.
+            </p>
+
+            <a href="#"
+               class="inline-block mt-5 text-skyclassic-600 font-semibold
+                      group-hover:text-skyclassic-800">
+              Lihat Produk →
+            </a>
+
+          </div>
+
+
+          <div class="group bg-skyclassic-50 rounded-3xl p-7
+                      border border-skyclassic-100
+                      hover:-translate-y-2 transition duration-300">
+
+            <div class="h-48 rounded-2xl bg-skyclassic-200
+                        flex items-center justify-center">
+
+              <div class="w-24 h-32 bg-skyclassic-800 rounded-xl shadow-lg
+                          flex items-center justify-center">
+                <span class="font-display font-bold text-white text-2xl">
+                  K
+                </span>
+              </div>
+
+            </div>
+
+            <h3 class="mt-6 text-xl font-bold">Kopima Classic</h3>
+
+            <p class="mt-2 text-slate-500 text-sm leading-6">
+              Cita rasa klasik yang cocok untuk dinikmati kapan saja.
+            </p>
+
+            <a href="#"
+               class="inline-block mt-5 text-skyclassic-600 font-semibold
+                      group-hover:text-skyclassic-800">
+              Lihat Produk →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+    <section id="tentang" class="py-24 bg-skyclassic-50">
+
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+          <div>
+            <span class="text-sm font-bold uppercase
+                         tracking-[0.2em] text-skyclassic-500">
+              Tentang Kopima
+            </span>
+
+            <h2 class="mt-3 font-display text-4xl md:text-5xl
+                       font-bold text-skyclassic-900">
+              Secangkir kopi untuk setiap cerita.
+            </h2>
+
+            <p class="mt-6 text-slate-600 leading-8">
+              Kami percaya bahwa kopi bukan sekadar minuman.
+              Kopi adalah bagian dari rutinitas, percakapan,
+              inspirasi, dan momen sederhana yang membuat hari
+              terasa lebih berarti.
+            </p>
+
+            <a href="#kontak"
+               class="inline-flex mt-8 items-center gap-2
+                      bg-skyclassic-600 text-white
+                      px-6 py-3.5 rounded-full font-semibold
+                      hover:bg-skyclassic-700 transition">
+              Kenali Kopima
+              <span>→</span>
+            </a>
+          </div>
+
+          <div class="relative">
+
+            <div class="aspect-square max-w-md mx-auto
+                        rounded-[3rem]
+                        bg-gradient-to-br
+                        from-skyclassic-200 to-skyclassic-500
+                        flex items-center justify-center">
+
+              <div class="w-52 h-52 rounded-full bg-white/80
+                          flex items-center justify-center shadow-xl">
+
+                <div class="text-center">
+                  <div class="text-5xl font-display font-bold
+                              text-skyclassic-700">
+                    K
+                  </div>
+                  <p class="text-xs uppercase tracking-widest
+                            text-skyclassic-500">
+                    Kopima
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer id="kontak" class="bg-skyclassic-900 text-white">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+
+      <div class="grid md:grid-cols-3 gap-10 items-center">
+
+        <!-- Logo -->
+        <div>
+          <div class="flex items-center gap-3">
+
+            <div class="w-11 h-11 rounded-full
+                        bg-white text-skyclassic-700
+                        flex items-center justify-center">
+
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="w-6 h-6"
+                   fill="none"
+                   viewBox="0 0 24 24"
+                   stroke="currentColor">
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                      d="M6 8h12v5a6 6 0 01-12 0V8z"/>
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.8"
+                      d="M6 10H4a2 2 0 000 4h2"/>
+              </svg>
+
+            </div>
+
+            <div>
+              <p class="font-display text-2xl font-bold">
+                Kopima
+              </p>
+
+              <p class="text-xs text-skyclassic-200">
+                Rasa Asli, Energi Setiap Hari
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Menu -->
+        <div class="flex flex-wrap justify-center gap-x-7 gap-y-3
+                    text-sm text-skyclassic-200">
+
+          <a href="#beranda" class="hover:text-white transition">
+            Beranda
+          </a>
+
+          <a href="#produk" class="hover:text-white transition">
+            Produk
+          </a>
+
+          <a href="#tentang" class="hover:text-white transition">
+            Tentang Kami
+          </a>
+
+          <a href="#kontak" class="hover:text-white transition">
+            Kontak
+          </a>
+
+        </div>
+
+        <!-- Social -->
+        <div class="flex justify-center md:justify-end gap-3">
+
+          <a href="#"
+             class="w-10 h-10 rounded-full
+                    bg-white/10 flex items-center justify-center
+                    hover:bg-white hover:text-skyclassic-800 transition">
+            Instagram
+          </a>
+
+          <a href="#"
+             class="w-10 h-10 rounded-full
+                    bg-white/10 flex items-center justify-center
+                    hover:bg-white hover:text-skyclassic-800 transition">
+            FB
+          </a>
+
+          <a href="#"
+             class="w-10 h-10 rounded-full
+                    bg-white/10 flex items-center justify-center
+                    hover:bg-white hover:text-skyclassic-800 transition">
+            YT
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 mt-10 pt-7
+                  text-center text-sm text-skyclassic-300">
+        © 2026 Kopima. Semua hak dilindungi.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
